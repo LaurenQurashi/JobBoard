@@ -25,9 +25,12 @@ export default{
         {role: 'District Judge', opens:'30 days', show:false},
         {role: 'Tribunal Member', opens:'60 days', show:false},
         {role: 'Adjudicator', opens:'65 days', show:false}
-      ]
+      ],
+      msg: 'hi!',
+      selected : 'two'
     }
   }
+
 }
 </script>
 

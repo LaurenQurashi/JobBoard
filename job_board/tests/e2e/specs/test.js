@@ -47,3 +47,37 @@ describe('Views the Jobs Board page', () => {
     cy.contains('start date in: 65 days')
   });
 });
+
+describe('Views the application form', () => {
+
+  it('shows the email field', () => {
+    cy.visit('/');
+    cy.get('form').contains('email')
+  });
+
+  it('shows the options selector field', () => {
+    cy.visit('/');
+    cy.get('select').select('District Judge').contains('District Judge')
+  });
+
+  it('shows the options selector field', () => {
+    cy.visit('/');
+    cy.get('select').select('District Judge').contains('District Judge')
+  });
+
+  it('shows the options selector field', () => {
+    cy.visit('/');
+    cy.get('select').select('Tribunal Member').contains('Tribunal Member')
+  });
+
+  it('shows the options selector field', () => {
+    cy.visit('/');
+    cy.get('select').select('Adjudicator').contains('Adjudicator')
+  });
+
+  it('shows the submit button', () => {
+    cy.visit('/');
+    cy.get('form').contains('Submit')
+  });
+
+});

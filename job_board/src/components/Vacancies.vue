@@ -7,6 +7,25 @@
         <h3 v-show="vacancy.show">start date in: {{vacancy.opens}}</h3>
       </li>
     </ul>
+
+    <form id="form">
+      <p> Please enter your email along with the role you wish to apply for:</p>
+      <p>
+        <input type="text" placeholder="myname@email.com" v-model="email">
+        {{email}}
+      </p>
+      <p>
+        <select v-model="selected">
+          <option>District Judge</option>
+          <option>Tribunal Member</option>
+          <option>Adjudicator</option>
+        </select>
+        {{selected}}
+      </p>
+      <p>
+        <input type="submit" value="Submit">
+      </p>
+    </form>
   </div>
 </template>
 
@@ -22,7 +41,7 @@ export default{
     return{
     }
   }
-}
+};
 </script>
 
 <style scoped>
