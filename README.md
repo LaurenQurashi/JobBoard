@@ -3,13 +3,13 @@
 <img src="images/Vacancies.png" width=700>
 <img src="images/Applicants.png" width=700>
 
-##About
+## About
 JobBoard is a project I worked on for a tech test for the Judicial Appointments Commission. I used Vue.js (a framework I had never looked at or touched before this), to make this single page web app.
 
 ## Installation
 Please see the README in the job_board file for full instructions on installation, booting up, and running tests.
 
-##Purpose
+## Purpose
 - JobBoard is a single page web application, designed to help the Judicial Appointments Commission keep track of applicants who are interested in their vacancies.
 - Once JobBoard is installed, and the server is fired up, a user can browse current jobs available, and click to see the start date of each role. Users can also enter their email, the role they're interested in, and the date of applying. A record of their interest will be kept under the current applicants section.
 
@@ -50,6 +50,6 @@ In a nutshell:
 
 - Testing: My Unit tests definitely could have been more comprehensive. I ran out of time when unit testing, as I only started to implement the business logic after the front end was mostly set up. The resources I found around testing with Mocha and Chia were a bit inconclusive, and also seemed to test more of the front end things I had tested with Cypress. Given more time, I would investigate a lot more into Unit testing in Vue.js, and into what the best testing practices are.
 
-# Conclusion
+## Conclusion
 
-I had an awful lot of fun learning Vue for this test. I also found the topic to be quite interesting. I've given my best efforts into this project, and had to adapt my usual process accordingly. After this project, I feel I have at least a basic understanding of Vue.js, and could explain my code with moderate confidence. 
+I had an awful lot of fun learning Vue for this test. I also found the topic to be quite interesting. I've given my best efforts into this project, and had to adapt my usual process accordingly. After this project, I feel I have at least a basic understanding of Vue.js, and could explain my code with moderate confidence.
