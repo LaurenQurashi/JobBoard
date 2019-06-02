@@ -1,11 +1,3 @@
-// https://docs.cypress.io/api/introduction/api.html
-
-// describe('My First Test', () => {
-//   it('Visits the app root url', () => {
-//     cy.visit('/');
-//     cy.contains('h1', 'Hello Lauren!');
-//   });
-// });
 
 describe('Views the Jobs Board page', () => {
   it('Displays the title of the JB', () => {
@@ -48,27 +40,18 @@ describe('Views the Jobs Board page', () => {
 });
 
 describe('Views the application form', () => {
-  it('shows the email field', () => {
-    cy.visit('/');
-    cy.get('form').contains('email');
-  });
 
-  it('shows the options selector field', () => {
+  it('shows the option for DJ on the selector field', () => {
     cy.visit('/');
     cy.get('select').select('District Judge').contains('District Judge');
   });
 
-  it('shows the options selector field', () => {
-    cy.visit('/');
-    cy.get('select').select('District Judge').contains('District Judge');
-  });
-
-  it('shows the options selector field', () => {
+  it('shows the option for TM on the selector field', () => {
     cy.visit('/');
     cy.get('select').select('Tribunal Member').contains('Tribunal Member');
   });
 
-  it('shows the options selector field', () => {
+  it('shows the option for Adj on the selector field', () => {
     cy.visit('/');
     cy.get('select').select('Adjudicator').contains('Adjudicator');
   });
@@ -79,26 +62,38 @@ describe('Views the application form', () => {
   });
 });
 
-describe('Views the applicants section', () => {
+describe('acknowledges the applicants submission', () => {
 
-  it('Displays the email of the applicant', () => {
+  it('shows the email box with applicants choice ', () => {
     cy.visit('/');
-    cy.contains('app1@app.com');
+    cy.get('input.email').type('fake@email.com').should('have.value', 'fake@email.com');
+
   });
 
-  it('Displays information about the role they applied to', () => {
+  it('shows the selector box with applicants choice', () => {
     cy.visit('/');
-    cy.contains('applied to: District Judge');
+    cy.get('select').select('Adjudicator').should('have.value', 'Adjudicator');
+
   });
 
-  it('Displays the date the applicant applied', () => {
+  it('shows the date box with applicants choice', () => {
     cy.visit('/');
-    cy.contains('02/06/2019');
+    cy.get('input.date').type('00/00/00').should('have.value', '00/00/00');
+
   });
 
-  it('Displays information about the Adjudicator role', () => {
+});
+
+describe('Shows the applicants submission', () => {
+
+  it('shows the email box with applicants choice ', () => {
     cy.visit('/');
-    cy.contains('Adjudicator');
+    cy.get('input.email')
+      .type('fake@email.com')
+      .get('select').select('Adjudicator')
+      .get('input.date').type('00/00/00')
+      .get('button').click()
+    .contains('fake@email.com', 'Adjudicator', '00/00/00');
   });
 
 });

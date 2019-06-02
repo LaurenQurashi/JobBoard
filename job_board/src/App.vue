@@ -2,7 +2,8 @@
   <!-- Page layout goes here  -->
   <div>
     <app-header></app-header>
-    <app-vacancies v-bind:vacancies="vacancies" v-bind:applicants="applicants"></app-vacancies>
+    <app-vacancies v-bind:vacancies="vacancies"></app-vacancies>
+    <!-- v-bind:applicants="applicants" -->
     <app-footer></app-footer>
   </div>
 </template>
@@ -27,11 +28,11 @@ export default {
         { role: 'Tribunal Member', opens: '60 days', show: false },
         { role: 'Adjudicator', opens: '65 days', show: false },
       ],
-      applicants: [
-        { email: 'app1@app.com', role: 'District Judge', date: '02/06/2019' },
-        { email: 'app2@app.com', role: 'Tribunal Member', date: '03/06/2019' },
-        { email: 'app3@app.com', role: 'Adjudicator', date: '04/06/2019' },
-      ],
+      // applicants: [
+      //   [ email: 'app1@app.com', role: 'District Judge', date: '02/06/2019' ],
+      //   [ email: 'app2@app.com', role: 'Tribunal Member', date: '03/06/2019' ],
+      //   [ email: 'app3@app.com', role: 'Adjudicator', date: '04/06/2019' ],
+      // ],
     };
   },
 

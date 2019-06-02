@@ -11,26 +11,29 @@
     <form id="form">
       <p> Please enter your email along with the role you wish to apply for:</p>
       <p>
-        <input type="text" placeholder="myname@email.com" v-model="email">
-        {{email}}
+        <input type="text" class="email" placeholder="myname@email.com" ref="form_email"><br>
       </p>
       <p>
-        <select v-model="selected">
+        <select v-model="selected" placeholder="myname@email.com" ref="form_role">
           <option>District Judge</option>
           <option>Tribunal Member</option>
           <option>Adjudicator</option>
         </select>
-        {{selected}}
       </p>
       <p>
-        <input type="submit" value="Submit">
+        <input type="text" class="date" placeholder="please enter the date in dd/mm/yy format" ref="form_date"><br>
+      </p>
+      <p>
+         <button @click.prevent="getFormValues(), pushToApplicantsList()">Submit</button>
       </p>
     </form><hr>
+
     <h2> Current Applicants </h2>
-    <ul>
+    <ul class="appli.output">
       <li v-for="applicant in applicants">
-        <h2>{{applicant.email}} applied to: {{applicant.role}}</h2>
-        <h3> Applied on: {{applicant.date}}</h3>
+        <h2>{{ applicant.email }}</h2>
+        <h3> applied to: {{ applicant.role }}</h3>
+        <h4> Applied on: {{ applicant.date }}</h4>
       </li>
     </ul>
   </div>
@@ -43,16 +46,28 @@ export default {
       type: Array,
       required: true,
     },
-    applicants: {
-    type: Array,
-    required: true,
-  },
   },
   data() {
     return {
-    };
+      applicants: [],
+      applicant: {
+        email: '',
+        role: '',
+        date: ''
+      }
+    }
   },
-};
+  methods: {
+   getFormValues () {
+     this.applicant.email = this.$refs.form_email.value,
+     this.applicant.role = this.$refs.form_role.value,
+     this.applicant.date = this.$refs.form_date.value
+   },
+   pushToApplicantsList () {
+     this.applicants.push({...this.applicant });
+   },
+ },
+}
 </script>
 
 <style scoped>
