@@ -25,27 +25,60 @@
       <p>
         <input type="submit" value="Submit">
       </p>
-    </form>
+    </form><hr>
+    <h2> Current Applicants </h2>
+    <ul>
+      <li v-for="applicant in applicants">
+        <h2>{{applicant.email}} applied to: {{applicant.role}}</h2>
+        <h3> Applied on: {{applicant.date}}</h3>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
-export default{
-  props:{
-    vacancies:{
+export default {
+  props: {
+    vacancies: {
       type: Array,
-      required: true
-    }
+      required: true,
+    },
+    applicants: {
+    type: Array,
+    required: true,
   },
-  data(){
-    return{
-    }
-  }
+  },
+  data() {
+    return {
+    };
+  },
 };
 </script>
 
 <style scoped>
 #vacancies{
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+}
+li{
+    flex-grow: 1;
+    flex-basis: 300px;
+    text-align: center;
+    padding: 30px;
+    border: 1px solid #222;
+    margin: 10px;
+}
+
+#applicants{
     width: 100%;
     max-width: 1200px;
     margin: 40px auto;

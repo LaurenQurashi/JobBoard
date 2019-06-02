@@ -5,13 +5,13 @@
 </template>
 
 <script>
-export default{
-  data(){
-    return{
-      title:'Judicial Appointments Commission'
-    }
-  }
-}
+export default {
+  data() {
+    return {
+      title: 'Judicial Appointments Commission',
+    };
+  },
+};
 </script>
 
 <style scoped>

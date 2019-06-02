@@ -5,13 +5,13 @@
 </template>
 
 <script>
-export default{
-  data(){
-    return{
-      copyright: "Copyright for the Judicial Appointments Commission, June 2019"
-    }
-  }
-}
+export default {
+  data() {
+    return {
+      copyright: 'Copyright for the Judicial Appointments Commission, June 2019',
+    };
+  },
+};
 </script>
 
 <style scoped>
