@@ -16,11 +16,11 @@ export default {
 
 <style scoped>
 header{
-  background: lightgreen;
+  background: LightSlateGrey;
   padding: 10px
 }
 h1{
-  color: #222;
+  color: black;
   text-align: center;
 }
 </style>

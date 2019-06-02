@@ -16,11 +16,11 @@ export default {
 
 <style scoped>
   footer{
-    background: #222;
+    background: black;
     padding: 6px;
   }
   p{
-    color: lightgreen;
+    color: white;
     text-align: center;
   }
 </style>

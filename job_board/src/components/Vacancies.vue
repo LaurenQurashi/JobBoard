@@ -1,6 +1,7 @@
 <template>
   <div id="vacancies">
     <h2> Current Vacancies </h2>
+    <h4> Please click on the roles to see their start dates</h4>
     <ul>
       <li v-for="vacancy in vacancies" v-on:click="vacancy.show = !vacancy.show">
         <h2>{{vacancy.role}}</h2>
@@ -10,18 +11,19 @@
 
     <form id="form">
       <p> Please enter your email along with the role you wish to apply for:</p>
+      <p> Please note that your details will be kept on record for at least 90 days after the role starts.</p>
       <p>
         <input type="text" class="email" placeholder="myname@email.com" ref="form_email"><br>
       </p>
       <p>
-        <select v-model="selected" placeholder="myname@email.com" ref="form_role">
+        <select v-model="selected" placeholder="role" ref="form_role">
           <option>District Judge</option>
           <option>Tribunal Member</option>
           <option>Adjudicator</option>
         </select>
       </p>
       <p>
-        <input type="text" class="date" placeholder="please enter the date in dd/mm/yy format" ref="form_date"><br>
+        <input type="text" class="date" placeholder="dd/mm/yy format" ref="form_date"><br>
       </p>
       <p>
          <button @click.prevent="getFormValues(), pushToApplicantsList()">Submit</button>
@@ -117,4 +119,8 @@ li{
 h2{
   text-align: center;
 }
+h4{
+  text-align: center;
+}
+
 </style>
