@@ -31,6 +31,13 @@ When I received the details of the tech test, I set myself the VERY ambitious ta
 ### Completing
 I felt that the test went fairly well, and I'm happy with my accomplishments. I must say, I'm quite proud of myself for learning the ins and outs of a completely new framework in a couple of days. I took a mix of BDD and TDD approach with this task. I would use BDD in sandbox or codepen to practice the code I wanted to use, then TDD to implement it into my project. This was the best approach for me, as I didn't know how Vue.js worked and needed to play around with to understand what I was putting in my project. I also decided to switch up my usual process, and focus on developing the front end first. This isn't my usual approach, as normally I would develop the business logic and fit a front end around it, however I felt that seeing the outcome of my code would help me visualise how Vue.js worked a bit more easily. I used Cypress and Mocha with Chia to test, which again are testing technologies that I've never used before. Cypress was really nice to use actually, but I found unit testing the project a little bit confusing. This isn't a completed task, but I felt I have covered the MVP.
 
+### Questions I would have asked
+I received this tech test on a Friday, and in order to be the most productive I can be, I decided to make a start on my research and the test, instead of waiting till Monday for clarification. If this was a real life situation, I would have asked the following for clarity:
+
+- In regards to the details surrounding the jobs, does the 'Job Opens in' column refer to when the candidate would have their first day? or when that job should appear on the site?
+
+I decided to go for the first day answer, as it would make sense to me that you'd want to show any available jobs, rather than have a list of jobs that are lined up to appear on the site. I am conflicted however, as it isn't clear if the 90 day record is for a reserves list, or for contacting candidates about the position they applied for. 
+
 #### What went well
 In a nutshell:
 - Learning Vue.js went incredibly well given the timeframe. I'm confident I know how the code I write appears on the page.
